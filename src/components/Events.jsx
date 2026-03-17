@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 export default function Events() {
   return (
     <section id="events" className="bg-cream py-24 lg:py-32">
@@ -26,9 +28,9 @@ export default function Events() {
               to partners and design enthusiasts worldwide.
             </p>
 
-            <a href="#contact" className="btn-outline text-charcoal">
+            <Link to="/events" className="btn-outline text-charcoal">
               VIEW OUR EVENTS
-            </a>
+            </Link>
           </div>
         </div>
       </div>

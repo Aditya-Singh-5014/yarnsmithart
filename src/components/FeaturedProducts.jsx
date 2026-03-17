@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const products = [
   {
     title: 'Tableware & Placemats',
@@ -64,9 +66,9 @@ export default function FeaturedProducts() {
 
         {/* CTA */}
         <div className="text-center">
-          <a href="#contact" className="btn-outline text-charcoal">
+          <Link to="/products" className="btn-outline text-charcoal">
             VIEW ALL PRODUCTS
-          </a>
+          </Link>
         </div>
       </div>
     </section>

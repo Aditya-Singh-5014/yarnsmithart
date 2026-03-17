@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 export default function Lifestyle() {
   return (
     <section className="bg-cream">
@@ -15,7 +17,7 @@ export default function Lifestyle() {
           {/* Dark Content Panel */}
           <div className="bg-charcoal flex items-center px-10 lg:px-16 py-16 lg:py-24">
             <div>
-              <p className="section-label text-warm-gray-light mb-4 tracking-[0.3em]">
+              <p className="section-label-white mb-4 tracking-[0.3em]">
                 LIFESTYLE
               </p>
 
@@ -29,12 +31,12 @@ export default function Lifestyle() {
                 savouring.
               </p>
 
-              <a
-                href="#products"
+              <Link
+                to="/products"
                 className="btn-outline-light"
               >
                 SHOP THE LOOK
-              </a>
+              </Link>
             </div>
           </div>
         </div>

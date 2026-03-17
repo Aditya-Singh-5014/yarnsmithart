@@ -40,6 +40,15 @@ body {
   font-family: var(--font-sans);
 }
 
+.section-label-white {
+  color: var(--color-white);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  font-family: var(--font-sans);
+}
+
 /* Serif heading style */
 .section-heading {
   font-family: var(--font-serif);
@@ -71,8 +80,19 @@ body {
 }
 
 .btn-outline-light {
+  display: inline-block;
+  padding: 0.875rem 11rem;
+  border: 1px solid currentColor;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  background: transparent;
+  transition: all 0.3s ease;
+  font-family: var(--font-sans);
   color: white;
-  border-color: rgba(255,255,255,0.4);
 }
 
 .btn-outline-light:hover {

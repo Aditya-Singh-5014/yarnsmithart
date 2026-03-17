@@ -1,4 +1,5 @@
-import { Shield, Scale, Star } from 'lucide-react';
+import { Shield, Award, Star } from 'lucide-react';
+import {Link} from 'react-router-dom';
 
 const certifications = [
   {
@@ -7,7 +8,7 @@ const certifications = [
     description: 'Meeting international manufacturing standards.',
   },
   {
-    icon: Scale,
+    icon: Award,
     title: 'Fair Trade Practices',
     description: 'Ethical sourcing and fair labour practices.',
   },
@@ -24,7 +25,7 @@ export default function Certifications() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <p className="section-label text-copper-light mb-4">TRUST & QUALITY</p>
+          <p className="section-label-white mb-4">TRUST & QUALITY</p>
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-white font-normal leading-tight max-w-2xl mx-auto">
             Certified Excellence, Assured Quality
           </h2>
@@ -50,7 +51,7 @@ export default function Certifications() {
                     strokeWidth={1.2}
                   />
                 </div>
-                <h3 className="font-serif text-xl text-copper-light mb-3">
+                <h3 className="font-serif text-xl text-white mb-3">
                   {cert.title}
                 </h3>
                 <p className="text-white/50 text-sm leading-relaxed">
@@ -60,6 +61,13 @@ export default function Certifications() {
             );
           })}
         </div>
+
+        <div className="text-center mt-16">
+          <Link to="/certifications" className="btn-outline-light">
+            VIEW ALL CERTIFICATIONS
+          </Link>
+        </div>
+
       </div>
     </section>
   );

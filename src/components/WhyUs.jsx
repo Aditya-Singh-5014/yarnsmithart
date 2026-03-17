@@ -3,7 +3,7 @@ import { Sparkles, Leaf, Award, Globe } from 'lucide-react';
 const features = [
   {
     icon: Sparkles,
-    title: 'Artisanal Craftsmanship',
+    title: 'Handcrafted Excellence',
     description: 'Every piece is made by skilled artisans using time-honoured techniques.',
   },
   {
@@ -13,7 +13,7 @@ const features = [
   },
   {
     icon: Award,
-    title: 'Quality Standards',
+    title: 'Certified Quality',
     description: 'Our products meet international quality and safety standards.',
   },
   {
@@ -30,8 +30,9 @@ export default function WhyUs() {
         {/* Header */}
         <div className="text-center mb-16">
           <p className="section-label mb-4">WHY YARNSMITHARTS</p>
-          <h2 className="section-heading text-3xl md:text-4xl lg:text-5xl max-w-3xl mx-auto">
-            Crafted for Those Who Appreciate the Finer Things
+          <h2 className="section-heading text-2xl md:text-3xl lg:text-4xl max-w-3xl mx-auto">
+            Crafted for Those Who <br />
+            Appreciate the Finer Things
           </h2>
         </div>
 

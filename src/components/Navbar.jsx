@@ -1,15 +1,16 @@
 import { useState, useEffect } from 'react';
+import { NavLink, Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 
 const navLinks = [
-  { label: 'Home', href: '#home' },
-  { label: 'About Us', href: '#about' },
-  { label: 'Products', href: '#products' },
-  { label: 'Events & Fair', href: '#events' },
-  { label: 'Certifications', href: '#certifications' },
-  { label: 'Careers', href: '#careers' },
-  { label: 'Testimonials', href: '#testimonials' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Home', to: '/' },
+  { label: 'About Us', to: '/about' },
+  { label: 'Products', to: '/products' },
+  { label: 'Events & Fair', to: '/events' },
+  { label: 'Certifications', to: '/certifications' },
+  { label: 'Careers', to: '/careers' },
+  { label: 'Testimonials', to: '/testimonials' },
+  { label: 'Contact', to: '/contact' },
 ];
 
 export default function Navbar() {
@@ -33,27 +34,30 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <a
-            href="#home"
+          <Link
+            to="/"
             className="font-serif text-2xl lg:text-[1.65rem] font-bold text-charcoal tracking-tight"
           >
             Yarnsmitharts
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => (
-              <a
+              <NavLink
                 key={link.label}
-                href={link.href}
-                className={`text-[0.8rem] font-medium transition-colors duration-200 ${
-                  link.label === 'Home'
-                    ? 'text-copper'
-                    : 'text-charcoal/80 hover:text-copper'
-                }`}
+                to={link.to}
+                end={link.to === '/'}
+                className={({ isActive }) =>
+                  `text-[0.8rem] font-medium transition-colors duration-200 ${
+                    isActive
+                      ? 'text-copper'
+                      : 'text-charcoal/80 hover:text-copper'
+                  }`
+                }
               >
                 {link.label}
-              </a>
+              </NavLink>
             ))}
           </div>
 
@@ -76,18 +80,21 @@ export default function Navbar() {
       >
         <div className="bg-cream border-t border-tan/30 px-6 py-4 space-y-3">
           {navLinks.map((link) => (
-            <a
+            <NavLink
               key={link.label}
-              href={link.href}
+              to={link.to}
+              end={link.to === '/'}
               onClick={() => setMobileOpen(false)}
-              className={`block text-sm font-medium py-2 transition-colors ${
-                link.label === 'Home'
-                  ? 'text-copper'
-                  : 'text-charcoal/80 hover:text-copper'
-              }`}
+              className={({ isActive }) =>
+                `block text-sm font-medium py-2 transition-colors ${
+                  isActive
+                    ? 'text-copper'
+                    : 'text-charcoal/80 hover:text-copper'
+                }`
+              }
             >
               {link.label}
-            </a>
+            </NavLink>
           ))}
         </div>
       </div>

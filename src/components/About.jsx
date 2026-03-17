@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 export default function About() {
   return (
     <section id="about" className="bg-cream py-24 lg:py-32">
@@ -24,9 +26,9 @@ export default function About() {
               bring the warmth of handmade excellence to modern interiors.
             </p>
 
-            <a href="#products" className="btn-outline text-charcoal">
+            <Link to="/about" className="btn-outline text-charcoal">
               DISCOVER OUR HERITAGE
-            </a>
+            </Link>
           </div>
 
           {/* Image */}

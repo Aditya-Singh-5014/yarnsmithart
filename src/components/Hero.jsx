@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 export default function Hero() {
   return (
     <section
@@ -17,7 +19,7 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pt-20">
         <div className="max-w-2xl">
-          <p className="section-label text-white/75 mb-5 tracking-[0.3em]">
+          <p className="section-label-white mb-5 tracking-[0.3em]">
             PREMIUM HOME & KITCHEN ACCESSORIES
           </p>
 
@@ -32,15 +34,15 @@ export default function Hero() {
           </p>
 
           <div className="flex flex-wrap gap-4">
-            <a href="#products" className="btn-filled">
+            <Link to="/products" className="btn-filled">
               EXPLORE COLLECTION
-            </a>
-            <a
-              href="#about"
+            </Link>
+            <Link
+              to="/about"
               className="btn-outline text-white border-white/40 hover:bg-white hover:text-charcoal hover:border-white"
             >
               OUR STORY
-            </a>
+            </Link>
           </div>
         </div>
       </div>

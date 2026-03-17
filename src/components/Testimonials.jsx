@@ -1,4 +1,5 @@
 import { Star } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const testimonials = [
   {
@@ -70,9 +71,9 @@ export default function Testimonials() {
 
         {/* CTA */}
         <div className="text-center">
-          <a href="#contact" className="btn-outline text-charcoal">
+          <Link to="/testimonials" className="btn-outline text-charcoal">
             READ MORE TESTIMONIALS
-          </a>
+          </Link>
         </div>
       </div>
     </section>

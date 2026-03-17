@@ -17,7 +17,8 @@ export default function Newsletter() {
         <p className="section-label mb-4">STAY CONNECTED</p>
 
         <h2 className="section-heading text-3xl md:text-4xl lg:text-5xl mb-5">
-          Join the Yarnsmitharts World
+          Join the Yarnsmitharts <br/>
+          World
         </h2>
 
         <p className="text-warm-gray text-base leading-relaxed mb-10 max-w-xl mx-auto">
