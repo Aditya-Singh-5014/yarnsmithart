@@ -16,20 +16,21 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero Banner */}
-      <section className="relative bg-charcoal py-36 lg:py-48 overflow-hidden">
-        <div className="absolute inset-0">
-          <img
-            src={productCollectionImg}
-            alt="Yarnsmitharts artisan at work"
-            className="w-full h-full object-fill opacity-80"
-          />
-          <div className="absolute inset-0 bg-linear-to-r from-charcoal/50 via-charcoal/20 to-transparent" />
-        </div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="section-label-white mb-4 tracking-[0.3em]">OUR STORY</p>
-          <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white font-normal leading-tight">
-            About YARNSMITH ARTS
-          </h1>
+      <section className="relative mt-16 lg:mt-20 bg-charcoal overflow-hidden group">
+        <img
+          src={productCollectionImg}
+          alt="Yarnsmitharts artisan at work"
+          className="w-full h-auto object-cover opacity-80 block"
+        />
+        <div className="absolute inset-0 bg-linear-to-r from-charcoal/50 via-charcoal/20 to-transparent pointer-events-none" />
+        
+        <div className="absolute inset-0 flex items-center">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <p className="section-label-white mb-2 sm:mb-4 tracking-[0.3em] text-[10px] sm:text-xs">OUR STORY</p>
+            <h1 className="font-serif text-2xl sm:text-4xl md:text-5xl lg:text-6xl text-white font-normal leading-tight">
+              About YARNSMITH ARTS
+            </h1>
+          </div>
         </div>
       </section>
 

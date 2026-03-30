@@ -20,14 +20,9 @@ export default function ContactPage() {
     e.preventDefault();
     setStatus('Sending...');
 
-    // These IDs will need to be configured in your EmailJS dashboard:
-    // 1. Create an EmailJS account
-    // 2. Add yash19rai99@gmail.com as your Email Service (Service ID)
-    // 3. Create an Email Template that sends TO prateek@yarnsmitharts.com FROM yash19rai99@gmail.com
-    // 4. Set the template variables: {{name}}, {{email}}, {{company}}, {{subject}}, {{message}}
-    const serviceID = import.meta.env.VITE_EMAILJS_SERVICE_ID || 'YOUR_SERVICE_ID';
-    const templateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'YOUR_TEMPLATE_ID';
-    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'YOUR_PUBLIC_KEY';
+    const serviceID = 'service_pxg65gi';
+    const templateID = 'template_k7sckls';
+    const publicKey = 'qu6IQVljkR2dGIs_U';
 
     emailjs
       .send(
