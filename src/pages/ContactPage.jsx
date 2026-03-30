@@ -40,7 +40,6 @@ export default function ContactPage() {
       .then(
         () => {
           setStatus('Message sent successfully!');
-          alert('Thank you for your message! We will get back to you soon.');
           setFormData({ name: '', email: '', company: '', subject: '', message: '' });
           setTimeout(() => setStatus(''), 3000);
         },

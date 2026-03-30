@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import { Heart, TrendingUp, Users, Clock, Briefcase } from 'lucide-react';
 import craftsmanshipImg from '../assets/Craftsmanship.png';
 import lifestyleImg from '../assets/Lifestyle inspiration.png';
@@ -64,7 +63,7 @@ export default function CareersPage() {
             alt="Yarnsmitharts workspace"
             className="w-full h-full object-cover opacity-50"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-charcoal/70 via-charcoal/40 to-transparent" />
+          <div className="absolute inset-0 bg-linear-to-r from-charcoal/70 via-charcoal/40 to-transparent" />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="section-label text-copper-light mb-4 tracking-[0.3em]">JOIN OUR TEAM</p>
@@ -147,14 +146,14 @@ export default function CareersPage() {
                     {pos.department} · {pos.location} · {pos.type}
                   </p>
                 </div>
-                <Link
-                  to="/contact"
+                <a
+                  href={`mailto:prateek@yarnsmitharts.com?subject=Job Application: ${pos.title}`}
                   className="btn-filled whitespace-nowrap text-center"
                   style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}
                 >
                   <Briefcase size={15} strokeWidth={1.5} />
                   APPLY NOW
-                </Link>
+                </a>
               </div>
             ))}
           </div>
