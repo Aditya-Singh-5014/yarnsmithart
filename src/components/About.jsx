@@ -1,15 +1,16 @@
 import { Link } from 'react-router-dom';
+import craftsmanshipImg from '../assets/Artisan craftsmanship.png';
 
 export default function About() {
   return (
     <section id="about" className="bg-cream py-24 lg:py-32">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Text Content */}
           <div>
             <p className="section-label mb-4">THE YARNSMITHARTS DIFFERENCE</p>
 
-            <h2 className="section-heading text-4xl md:text-5xl mb-8">
+            <h2 className="section-heading text-3xl sm:text-4xl md:text-5xl mb-6 sm:mb-8">
               Artistry in Every Detail
             </h2>
 
@@ -34,7 +35,7 @@ export default function About() {
           {/* Image */}
           <div className="relative overflow-hidden rounded-sm">
             <img
-              src="https://yarnsmitharts-brand-blueprint.lovable.app/assets/about-craft-Dy_2xpzg.jpg"
+              src={craftsmanshipImg}
               alt="Artisan crafting with traditional techniques"
               className="w-full h-[400px] lg:h-[500px] object-cover hover:scale-105 transition-transform duration-700"
             />

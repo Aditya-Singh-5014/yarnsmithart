@@ -30,14 +30,14 @@ export default function WhyUs() {
         {/* Header */}
         <div className="text-center mb-16">
           <p className="section-label mb-4">WHY YARNSMITHARTS</p>
-          <h2 className="section-heading text-2xl md:text-3xl lg:text-4xl max-w-3xl mx-auto">
+          <h2 className="section-heading text-xl sm:text-2xl md:text-3xl lg:text-4xl max-w-3xl mx-auto">
             Crafted for Those Who <br />
             Appreciate the Finer Things
           </h2>
         </div>
 
         {/* Feature Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6">
           {features.map((feature) => {
             const Icon = feature.icon;
             return (

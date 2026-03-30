@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import craftsmanshipImg from '../assets/Craftsmanship.png';
 import { Shield, Scale, Star, CheckCircle, Award } from 'lucide-react';
 
 const certifications = [
@@ -33,9 +34,9 @@ export default function QualityCertificationsPage() {
       {/* Hero Banner */}
       <section className="relative bg-charcoal py-28 lg:py-36 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-charcoal via-charcoal-light/50 to-charcoal opacity-90" />
-        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 text-center">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="section-label text-copper-light mb-4 tracking-[0.3em]">TRUST & QUALITY</p>
-          <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-white font-normal leading-tight">
+          <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white font-normal leading-tight">
             Quality & Certifications
           </h1>
           <p className="text-white/60 mt-5 text-lg max-w-2xl mx-auto leading-relaxed">
@@ -46,15 +47,15 @@ export default function QualityCertificationsPage() {
 
       {/* Certifications Grid */}
       <section className="bg-cream py-24 lg:py-32">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <p className="section-label mb-4">CERTIFICATIONS</p>
-            <h2 className="section-heading text-3xl md:text-4xl lg:text-5xl">
+            <h2 className="section-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
               Handcrafted Excellence
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 lg:gap-8">
             {certifications.map((cert) => {
               const Icon = cert.icon;
               return (
@@ -80,18 +81,18 @@ export default function QualityCertificationsPage() {
 
       {/* Quality Process */}
       <section className="bg-tan-light py-24 lg:py-32">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div className="relative overflow-hidden rounded-sm">
               <img
-                src="https://yarnsmitharts-brand-blueprint.lovable.app/assets/about-craft-Dy_2xpzg.jpg"
+                src={craftsmanshipImg}
                 alt="Quality inspection process"
                 className="w-full h-[400px] lg:h-[500px] object-cover hover:scale-105 transition-transform duration-700"
               />
             </div>
             <div>
               <p className="section-label mb-4">OUR PROCESS</p>
-              <h2 className="section-heading text-3xl md:text-4xl lg:text-[2.65rem] mb-6">
+              <h2 className="section-heading text-2xl sm:text-3xl md:text-4xl lg:text-[2.65rem] mb-6">
                 Quality Trust in Every Fiber
               </h2>
               <p className="text-warm-gray text-base leading-relaxed mb-8">
@@ -112,8 +113,8 @@ export default function QualityCertificationsPage() {
 
       {/* CTA */}
       <section className="bg-charcoal py-20 lg:py-28">
-        <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
-          <h2 className="font-serif text-3xl md:text-4xl text-white font-normal leading-tight mb-5">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl text-white font-normal leading-tight mb-5">
             Questions About Our Quality Standards?
           </h2>
           <p className="text-white/50 text-base leading-relaxed mb-10 max-w-2xl mx-auto">

@@ -15,7 +15,7 @@ export default function CTABanner() {
           Explore our curated collections or connect with us to discuss custom orders and partnerships.
         </p>
 
-        <div className="flex justify-center gap-4">
+        <div className="flex flex-col sm:flex-row justify-center gap-4">
           <Link to="/products" className="btn-outline-light">
             BROWSE PRODUCTS
           </Link>

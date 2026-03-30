@@ -1,35 +1,42 @@
 import { Link } from 'react-router-dom';
+import { Check } from 'lucide-react';
+import productCollectionImg from '../assets/Product collection.png';
+import lifestyleImg from "../assets/Lifestyle inspiration.png";
+import craftsmanshipImg from '../assets/Craftsmanship.png';
+import heroHomeImg from '../assets/YarnsmithartsHome.png';
+import basketsImg from '../assets/Baskets & Storage.png';
+import kitchenImg from '../assets/Kitchen Accessories.png';
 
 const categories = [
   {
-    title: 'Placemats & Table Runners',
+    title: 'Jute Placemats & Coaster',
     description: 'Handwoven from natural jute, cotton, and seagrass. Available in an array of textures, colours, and sizes.',
-    image: 'https://yarnsmitharts-brand-blueprint.lovable.app/assets/products-collection-DeqHbNLb.jpg',
+    image: productCollectionImg,
   },
   {
-    title: 'Baskets & Storage',
+    title: 'Jute Baskets & Storage',
     description: 'Beautifully crafted storage baskets that bring warmth and order to any room.',
-    image: 'https://yarnsmitharts-brand-blueprint.lovable.app/assets/products-collection-DeqHbNLb.jpg',
+    image: basketsImg,
   },
   {
     title: 'Kitchen Accessories',
     description: 'Serving boards, trivets, coasters, and more — designed for the modern kitchen.',
-    image: 'https://yarnsmitharts-brand-blueprint.lovable.app/assets/products-collection-DeqHbNLb.jpg',
+    image: kitchenImg,
   },
   {
-    title: 'Table Linen',
-    description: 'Elegant napkins, tablecloths, and runners crafted from premium natural fabrics.',
-    image: 'https://yarnsmitharts-brand-blueprint.lovable.app/assets/lifestyle-dining-ON8M0PdY.jpg',
+    title: 'Home Décor Accents',
+    description: 'Vases, candle holders, and decorative accessories that add character to your space.',
+    image: lifestyleImg,
   },
   {
-    title: 'Decor',
-    description: 'Statement pieces and accent items that add artisanal charm to any space.',
-    image: 'https://yarnsmitharts-brand-blueprint.lovable.app/assets/about-craft-Dy_2xpzg.jpg',
+    title: 'Seasonal Collections',
+    description: 'Limited-edition collections inspired by global trends and seasonal palettes.',
+    image: craftsmanshipImg,
   },
   {
-    title: 'Custom & Bespoke',
-    description: 'Tailored designs for retailers, hotels, and interior projects. Made to your specification.',
-    image: 'https://yarnsmitharts-brand-blueprint.lovable.app/assets/hero-home-DneUz7Zf.jpg',
+    title: 'Iron Wired Baskets',
+    description: 'Tailored iron wire baskets for retail displays, hospitality spaces, and interior styling. Crafted to your exact specifications.',
+    image: heroHomeImg,
   },
 ];
 
@@ -45,23 +52,39 @@ const designHighlights = [
 export default function ProductsPage() {
   return (
     <>
-      {/* Hero */}
-      <section className="bg-cream py-28 lg:py-36">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
-          <p className="section-label mb-4">CATEGORIES</p>
-          <h1 className="section-heading text-4xl md:text-5xl lg:text-6xl mb-5">
-            Explore Our Range
+      {/* Hero Banner */}
+      <section className="relative bg-charcoal py-36 lg:py-48 overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src={productCollectionImg}
+            alt="Product collection"
+            className="w-full h-full object-contain opacity-80"
+          />
+          <div className="absolute inset-0 bg-linear-to-r from-charcoal/50 via-charcoal/20 to-transparent" />
+        </div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="section-label-white mb-4 tracking-[0.3em]">OUR COLLECTIONS</p>
+          <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white font-normal leading-tight">
+            Products
           </h1>
-          <p className="text-warm-gray text-lg max-w-2xl mx-auto leading-relaxed">
-            From tabletop essentials to statement décor, discover collections designed to elevate every space.
-          </p>
         </div>
       </section>
 
-      {/* Product Grid */}
-      <section className="bg-cream pb-24 lg:pb-32">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+      {/* Categories */}
+      <section className="bg-cream py-20 lg:py-28">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-14 lg:mb-18">
+            <p className="section-label mb-4 tracking-[0.3em]">CATEGORIES</p>
+            <h2 className="section-heading text-2xl sm:text-3xl md:text-4xl lg:text-[2.65rem] mb-5">
+              Explore Our Range
+            </h2>
+            <p className="text-warm-gray text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">
+              From tabletop essentials to statement décor, discover collections designed to
+              elevate every space.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {categories.map((cat) => (
               <div key={cat.title} className="group cursor-pointer">
                 <div className="relative overflow-hidden rounded-sm mb-5">
@@ -71,10 +94,10 @@ export default function ProductsPage() {
                     className="w-full h-[320px] lg:h-[380px] object-cover group-hover:scale-105 transition-transform duration-700"
                   />
                 </div>
-                <h3 className="font-serif text-xl lg:text-2xl text-charcoal mb-2 group-hover:text-copper transition-colors">
+                <h3 className="font-serif text-lg lg:text-xl text-charcoal mb-2 group-hover:text-copper transition-colors italic">
                   {cat.title}
                 </h3>
-                <p className="text-warm-gray text-sm leading-relaxed">
+                <p className="text-warm-gray text-[13px] leading-relaxed">
                   {cat.description}
                 </p>
               </div>
@@ -85,31 +108,31 @@ export default function ProductsPage() {
 
       {/* Design Highlights */}
       <section className="bg-tan-light py-24 lg:py-32">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            {/* Image on Left */}
+            <div className="relative overflow-hidden rounded-sm">
+              <img
+                src={craftsmanshipImg}
+                alt="Design highlights"
+                className="w-full h-[400px] lg:h-[500px] object-cover hover:scale-105 transition-transform duration-700"
+              />
+            </div>
+
+            {/* Content on Right */}
             <div>
-              <p className="section-label mb-4">OUR PRODUCTS</p>
-              <h2 className="section-heading text-3xl md:text-4xl lg:text-[2.65rem] mb-8">
+              <p className="section-label mb-4 tracking-[0.3em]">WHY OUR PRODUCTS</p>
+              <h2 className="section-heading text-2xl sm:text-3xl md:text-4xl lg:text-[2.65rem] mb-8">
                 Design Highlights
               </h2>
-              <ul className="space-y-4 mb-10">
+              <ul className="space-y-4">
                 {designHighlights.map((point) => (
-                  <li key={point} className="flex items-start gap-3 text-warm-gray text-base">
-                    <span className="mt-2 w-1.5 h-1.5 rounded-full bg-copper flex-shrink-0" />
+                  <li key={point} className="flex items-start gap-3 text-warm-gray text-[14px]">
+                    <Check size={16} className="text-copper flex-shrink-0 mt-0.5" />
                     {point}
                   </li>
                 ))}
               </ul>
-              <Link to="/contact" className="btn-outline text-charcoal">
-                REQUEST A CATALOGUE
-              </Link>
-            </div>
-            <div className="relative overflow-hidden rounded-sm">
-              <img
-                src="https://yarnsmitharts-brand-blueprint.lovable.app/assets/about-craft-Dy_2xpzg.jpg"
-                alt="Design highlights"
-                className="w-full h-[400px] lg:h-[500px] object-cover hover:scale-105 transition-transform duration-700"
-              />
             </div>
           </div>
         </div>
@@ -117,15 +140,15 @@ export default function ProductsPage() {
 
       {/* CTA */}
       <section className="bg-charcoal py-20 lg:py-28">
-        <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
-          <h2 className="font-serif text-3xl md:text-4xl text-white font-normal leading-tight mb-6">
-            Looking for Custom Solutions?
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl text-white font-normal leading-tight mb-5 italic">
+            Interested in Our Products?
           </h2>
           <p className="text-white/50 text-base leading-relaxed mb-10 max-w-2xl mx-auto">
-            We offer bespoke designs tailored to your brand, retail shelves, or hospitality needs. Let's create something beautiful together.
+            Get in touch with our team for catalogues, samples, and custom orders.
           </p>
           <Link to="/contact" className="btn-outline text-white border-white/40 hover:bg-white hover:text-charcoal hover:border-white">
-            GET IN TOUCH
+            REQUEST A CATALOGUE
           </Link>
         </div>
       </section>

@@ -1,26 +1,28 @@
 import { Link } from 'react-router-dom';
-import { Users, Heart, Globe, Lightbulb } from 'lucide-react';
+import { Heart, TrendingUp, Users, Clock, Briefcase } from 'lucide-react';
+import craftsmanshipImg from '../assets/Craftsmanship.png';
+import lifestyleImg from '../assets/Lifestyle inspiration.png';
 
 const cultureHighlights = [
   {
     icon: Heart,
-    title: 'Passion for Craft',
-    description: 'We live and breathe craftsmanship. Every team member contributes to our artistic vision.',
+    title: 'Meaningful Work',
+    description: 'Create products that bring beauty to homes worldwide.',
+  },
+  {
+    icon: TrendingUp,
+    title: 'Growth',
+    description: 'Professional development and learning opportunities.',
   },
   {
     icon: Users,
-    title: 'Collaborative Spirit',
-    description: "We believe in teamwork, open communication, and supporting each other's growth.",
+    title: 'Inclusive Culture',
+    description: 'A diverse, supportive workplace that values every voice.',
   },
   {
-    icon: Globe,
-    title: 'Global Impact',
-    description: 'Our work reaches 20+ countries — be part of a team making a worldwide impact.',
-  },
-  {
-    icon: Lightbulb,
-    title: 'Innovation & Growth',
-    description: 'We encourage new ideas, continuous learning, and creative problem-solving.',
+    icon: Clock,
+    title: 'Work-Life Balance',
+    description: 'Flexible schedules and a healthy work environment.',
   },
 ];
 
@@ -28,23 +30,23 @@ const openPositions = [
   {
     title: 'Product Designer',
     department: 'Design',
-    location: 'Bahadurgarh, Haryana',
+    location: 'Bahadurgarh, India',
     type: 'Full-time',
   },
   {
-    title: 'Export Manager',
-    department: 'Sales & Export',
-    location: 'Bahadurgarh, Haryana',
+    title: 'Export Sales Manager',
+    department: 'Sales',
+    location: 'Bahadurgarh, India',
     type: 'Full-time',
   },
   {
     title: 'Quality Control Supervisor',
-    department: 'Quality',
-    location: 'Bahadurgarh, Haryana',
+    department: 'Operations',
+    location: 'Bahadurgarh, India',
     type: 'Full-time',
   },
   {
-    title: 'Digital Marketing Specialist',
+    title: 'Digital Marketing Executive',
     department: 'Marketing',
     location: 'Remote / Hybrid',
     type: 'Full-time',
@@ -58,48 +60,57 @@ export default function CareersPage() {
       <section className="relative bg-charcoal py-28 lg:py-36 overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://yarnsmitharts-brand-blueprint.lovable.app/assets/about-craft-Dy_2xpzg.jpg"
-            alt="Team at Yarnsmitharts"
-            className="w-full h-full object-cover opacity-20"
+            src={lifestyleImg}
+            alt="Yarnsmitharts workspace"
+            className="w-full h-full object-cover opacity-50"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-charcoal/70 to-charcoal/90" />
+          <div className="absolute inset-0 bg-gradient-to-r from-charcoal/70 via-charcoal/40 to-transparent" />
         </div>
-        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 text-center">
-          <p className="section-label text-copper-light mb-4 tracking-[0.3em]">CAREERS</p>
-          <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-white font-normal leading-tight">
-            Join Our Journey
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="section-label text-copper-light mb-4 tracking-[0.3em]">JOIN OUR TEAM</p>
+          <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white font-normal leading-tight">
+            Careers
           </h1>
-          <p className="text-white/60 mt-5 text-lg max-w-2xl mx-auto leading-relaxed">
-            Be part of a team that's shaping the future of handcrafted home accessories.
+        </div>
+      </section>
+
+      {/* Build Something Beautiful */}
+      <section className="bg-cream py-20 lg:py-28">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p className="section-label mb-4 tracking-[0.3em]">WORK WITH US</p>
+          <h2 className="section-heading text-2xl sm:text-3xl md:text-4xl lg:text-[2.65rem] mb-5">
+            Build Something Beautiful
+          </h2>
+          <p className="text-warm-gray text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">
+            At Yarnsmitharts, we're more than a brand — we're a community of passionate individuals
+            dedicated to craftsmanship, design, and sustainability. Join us and be part of a team that's
+            shaping the future of premium home accessories.
           </p>
         </div>
       </section>
 
-      {/* Culture */}
-      <section className="bg-cream py-24 lg:py-32">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <p className="section-label mb-4">OUR CULTURE</p>
-            <h2 className="section-heading text-3xl md:text-4xl lg:text-5xl">
-              Life at Yarnsmitharts
+      {/* Why Work at YARNSMITH ARTS */}
+      <section className="bg-tan-light py-20 lg:py-28">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-14">
+            <p className="section-label mb-4 tracking-[0.3em]">CULTURE</p>
+            <h2 className="section-heading text-2xl sm:text-3xl md:text-4xl lg:text-[2.65rem]">
+              Why Work at YARNSMITH ARTS
             </h2>
-            <p className="text-warm-gray mt-5 text-base max-w-2xl mx-auto leading-relaxed">
-              We're more than just a workplace — we're a community of creators, thinkers, and dreamers driven by a shared passion for craft.
-            </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
             {cultureHighlights.map((item) => {
               const Icon = item.icon;
               return (
-                <div key={item.title} className="text-center group">
-                  <div className="w-14 h-14 mx-auto mb-5 rounded-full bg-copper/10 flex items-center justify-center group-hover:bg-copper/20 transition-colors duration-300">
-                    <Icon size={24} className="text-copper" strokeWidth={1.5} />
+                <div key={item.title} className="text-center">
+                  <div className="flex justify-center mb-5">
+                    <Icon size={28} className="text-copper" strokeWidth={1.5} />
                   </div>
-                  <h3 className="font-serif text-lg text-charcoal mb-3">
+                  <h3 className="font-serif text-base lg:text-lg text-charcoal mb-3 italic">
                     {item.title}
                   </h3>
-                  <p className="text-warm-gray text-sm leading-relaxed">
+                  <p className="text-warm-gray text-[13px] leading-relaxed">
                     {item.description}
                   </p>
                 </div>
@@ -110,50 +121,43 @@ export default function CareersPage() {
       </section>
 
       {/* Open Positions */}
-      <section className="bg-tan-light py-24 lg:py-32">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <p className="section-label mb-4">OPPORTUNITIES</p>
-            <h2 className="section-heading text-3xl md:text-4xl lg:text-5xl">
+      <section className="bg-cream py-20 lg:py-28">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-14">
+            <p className="section-label mb-4 tracking-[0.3em]">OPPORTUNITIES</p>
+            <h2 className="section-heading text-2xl sm:text-3xl md:text-4xl lg:text-[2.65rem] mb-5">
               Open Positions
             </h2>
+            <p className="text-warm-gray text-sm sm:text-base leading-relaxed max-w-xl mx-auto">
+              Explore current openings and find the role that's right for you.
+            </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
+          <div className="space-y-4">
             {openPositions.map((pos) => (
               <div
                 key={pos.title}
-                className="bg-cream p-8 lg:p-10 rounded-sm hover:shadow-lg transition-shadow duration-300 group"
+                className="bg-cream border border-charcoal/10 p-6 md:p-7 flex flex-col md:flex-row md:items-center justify-between gap-4 hover:shadow-md transition-shadow duration-300 rounded-sm"
               >
-                <h3 className="font-serif text-xl text-charcoal mb-2 group-hover:text-copper transition-colors">
-                  {pos.title}
-                </h3>
-                <p className="text-warm-gray text-sm mb-1">{pos.department}</p>
-                <p className="text-warm-gray text-sm mb-1">{pos.location}</p>
-                <span className="inline-block text-xs font-medium text-copper bg-copper/10 px-3 py-1 rounded-full mt-3">
-                  {pos.type}
-                </span>
+                <div>
+                  <h3 className="font-serif text-lg text-charcoal mb-1.5 font-medium">
+                    {pos.title}
+                  </h3>
+                  <p className="text-warm-gray text-[13px]">
+                    {pos.department} · {pos.location} · {pos.type}
+                  </p>
+                </div>
+                <Link
+                  to="/contact"
+                  className="btn-filled whitespace-nowrap text-center"
+                  style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}
+                >
+                  <Briefcase size={15} strokeWidth={1.5} />
+                  APPLY NOW
+                </Link>
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="bg-charcoal py-20 lg:py-28">
-        <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
-          <h2 className="font-serif text-3xl md:text-4xl text-white font-normal leading-tight mb-5">
-            Don't See Your Role Listed?
-          </h2>
-          <p className="text-white/50 text-base leading-relaxed mb-10 max-w-2xl mx-auto">
-            We're always looking for talented individuals who share our passion for craft and design. Send us your resume.
-          </p>
-          <a
-            href="mailto:prateekgarg@yarnsmitharts.com"
-            className="btn-filled"
-          >
-            SEND YOUR RESUME
-          </a>
         </div>
       </section>
     </>

@@ -5,22 +5,22 @@ const testimonials = [
   {
     quote:
       '"Yarnsmitharts products have transformed our home décor section. The quality is unmatched and our customers love the craftsmanship."',
-    author: 'Elena M.',
-    role: 'Retail Partner, Italy',
+    author: 'Dolf',
+    role: 'Retail Buyer, Netherlands',
     rating: 5,
   },
   {
     quote:
       '"Working with Yarnsmitharts has been a revelation. Their attention to detail and commitment to sustainable practices aligns perfectly with our values."',
-    author: 'Marco T.',
-    role: 'Design Curator, Germany',
+    author: 'Wendy',
+    role: 'Interior Designer, USA',
     rating: 5,
   },
   {
     quote:
       '"From the initial samples to the final delivery, the experience has been impeccable. These are products that sell themselves."',
-    author: 'Sarah L.',
-    role: 'Buyer, United Kingdom',
+    author: 'Adriana',
+    role: 'Store Owner, USA',
     rating: 5,
   },
 ];
@@ -31,14 +31,14 @@ export default function Testimonials() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <p className="section-label mb-4">TESTIMONIALS</p>
-          <h2 className="section-heading text-3xl md:text-4xl lg:text-5xl">
-            What Our Partners Say
+          <p className="section-label mb-4 tracking-[0.3em]">TESTIMONIALS</p>
+          <h2 className="section-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
+            What Our Customers Say
           </h2>
         </div>
 
         {/* Cards */}
-        <div className="grid md:grid-cols-3 gap-6 lg:gap-8 mb-14">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 lg:gap-8 mb-14">
           {testimonials.map((t) => (
             <div
               key={t.author}

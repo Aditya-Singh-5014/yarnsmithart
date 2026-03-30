@@ -1,13 +1,16 @@
 import { useState } from 'react';
 import { Mail, Phone, MapPin } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    company: '',
     subject: '',
     message: '',
   });
+  const [status, setStatus] = useState('');
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -15,148 +18,100 @@ export default function ContactPage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert('Thank you for your message! We will get back to you soon.');
-    setFormData({ name: '', email: '', subject: '', message: '' });
+    setStatus('Sending...');
+
+    // These IDs will need to be configured in your EmailJS dashboard:
+    // 1. Create an EmailJS account
+    // 2. Add yash19rai99@gmail.com as your Email Service (Service ID)
+    // 3. Create an Email Template that sends TO prateek@yarnsmitharts.com FROM yash19rai99@gmail.com
+    // 4. Set the template variables: {{name}}, {{email}}, {{company}}, {{subject}}, {{message}}
+    const serviceID = import.meta.env.VITE_EMAILJS_SERVICE_ID || 'YOUR_SERVICE_ID';
+    const templateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'YOUR_TEMPLATE_ID';
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'YOUR_PUBLIC_KEY';
+
+    emailjs
+      .send(
+        serviceID,
+        templateID,
+        {
+          name: formData.name,
+          email: formData.email,
+          company: formData.company,
+          subject: formData.subject,
+          message: formData.message,
+        },
+        publicKey
+      )
+      .then(
+        () => {
+          setStatus('Message sent successfully!');
+          alert('Thank you for your message! We will get back to you soon.');
+          setFormData({ name: '', email: '', company: '', subject: '', message: '' });
+          setTimeout(() => setStatus(''), 3000);
+        },
+        (error) => {
+          console.error('EmailJS error:', error);
+          setStatus('Failed to send message. Please try again.');
+          alert('Failed to send message. Please check your EmailJS configuration or try again later.');
+        }
+      );
   };
 
   return (
     <>
-      {/* Hero */}
-      <section className="bg-cream py-28 lg:py-36">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
-          <p className="section-label mb-4">CONTACT</p>
-          <h1 className="section-heading text-4xl md:text-5xl lg:text-6xl mb-5">
-            Get In Touch
+      {/* Hero Banner */}
+      <section className="bg-charcoal py-20 lg:py-30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-white/40 text-[0.65rem] font-medium tracking-[0.3em] uppercase mb-3">LET'S CONNECT</p>
+          <h1 className="font-serif text-2xl sm:text-3xl md:text-4xl text-white font-normal leading-tight mb-3">
+            Contact Us
           </h1>
-          <p className="text-warm-gray text-lg max-w-2xl mx-auto leading-relaxed">
-            Have questions, need a catalogue, or want to explore a partnership? We'd love to hear from you.
+          <p className="text-white/50 text-sm max-w-lg leading-relaxed">
+            We'd love to hear from you. Whether it's a partnership inquiry or a product question, we're here to help.
           </p>
         </div>
       </section>
 
       {/* Contact Form + Info */}
-      <section className="bg-cream pb-24 lg:pb-32">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <section className="bg-cream py-16 lg:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
-            {/* Form */}
+            {/* Left – Contact Info */}
             <div>
               <h2 className="font-serif text-2xl text-charcoal mb-8">
-                Send Us a Message
+                Get in Touch
               </h2>
-              <form onSubmit={handleSubmit} className="space-y-5">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-charcoal mb-2">
-                    Full Name
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    className="w-full px-5 py-3.5 bg-white border border-tan text-charcoal text-sm rounded-sm outline-none focus:border-copper transition-colors placeholder:text-warm-gray-light"
-                    placeholder="Your full name"
-                    required
-                  />
+              <div className="space-y-5 mb-10">
+                <div className="flex items-start gap-3">
+                  <Mail size={16} className="text-copper mt-0.5 flex-shrink-0" />
+                  <a
+                    href="mailto:prateek@yarnsmitharts.com"
+                    className="text-warm-gray text-sm hover:text-copper transition-colors"
+                  >
+                    prateek@yarnsmitharts.com
+                  </a>
                 </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-charcoal mb-2">
-                    Email Address
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    className="w-full px-5 py-3.5 bg-white border border-tan text-charcoal text-sm rounded-sm outline-none focus:border-copper transition-colors placeholder:text-warm-gray-light"
-                    placeholder="your@email.com"
-                    required
-                  />
+                <div className="flex items-start gap-3">
+                  <Phone size={16} className="text-copper mt-0.5 flex-shrink-0" />
+                  <a
+                    href="tel:+919891357557"
+                    className="text-warm-gray text-sm hover:text-copper transition-colors"
+                  >
+                    +91 9891357557
+                  </a>
                 </div>
-                <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-charcoal mb-2">
-                    Subject
-                  </label>
-                  <input
-                    type="text"
-                    id="subject"
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleChange}
-                    className="w-full px-5 py-3.5 bg-white border border-tan text-charcoal text-sm rounded-sm outline-none focus:border-copper transition-colors placeholder:text-warm-gray-light"
-                    placeholder="How can we help?"
-                    required
-                  />
+                <div className="flex items-start gap-3">
+                  <MapPin size={16} className="text-copper mt-0.5 flex-shrink-0" />
+                  <p className="text-warm-gray text-sm leading-relaxed">
+                    Plot 100, HSIIDC Industrial Estate,<br />
+                    Bahadurgarh, Haryana–124507, India
+                  </p>
                 </div>
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-charcoal mb-2">
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    rows={6}
-                    className="w-full px-5 py-3.5 bg-white border border-tan text-charcoal text-sm rounded-sm outline-none focus:border-copper transition-colors placeholder:text-warm-gray-light resize-none"
-                    placeholder="Tell us about your requirements..."
-                    required
-                  />
-                </div>
-                <button type="submit" className="btn-filled w-full sm:w-auto">
-                  SEND MESSAGE
-                </button>
-              </form>
-            </div>
-
-            {/* Contact Info */}
-            <div>
-              <h2 className="font-serif text-2xl text-charcoal mb-8">
-                Contact Details
-              </h2>
-              <div className="space-y-6 mb-12">
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-full bg-copper/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <Mail size={18} className="text-copper" />
-                  </div>
-                  <div>
-                    <p className="text-charcoal font-medium text-sm mb-1">Email</p>
-                    <a
-                      href="mailto:prateekgarg@yarnsmitharts.com"
-                      className="text-warm-gray text-sm hover:text-copper transition-colors"
-                    >
-                      prateekgarg@yarnsmitharts.com
-                    </a>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-full bg-copper/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <Phone size={18} className="text-copper" />
-                  </div>
-                  <div>
-                    <p className="text-charcoal font-medium text-sm mb-1">Phone</p>
-                    <a
-                      href="tel:+919891357557"
-                      className="text-warm-gray text-sm hover:text-copper transition-colors"
-                    >
-                      +91 9891357557
-                    </a>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-full bg-copper/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <MapPin size={18} className="text-copper" />
-                  </div>
-                  <div>
-                    <p className="text-charcoal font-medium text-sm mb-1">Address</p>
-                    <p className="text-warm-gray text-sm leading-relaxed">
-                      Plot 100, HSIIDC Industrial Estate,<br />
-                      Bahadurgarh, Haryana-124507, India
-                    </p>
-                  </div>
+                <div className="flex items-start gap-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-copper mt-0.5 flex-shrink-0"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  <p className="text-warm-gray text-sm">
+                    Mon – Sat: 9:00 AM – 6:00 PM IST
+                  </p>
                 </div>
               </div>
 
@@ -166,7 +121,7 @@ export default function ContactPage() {
                   title="Yarnsmitharts Location"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3499.8898!2d76.9192!3d28.6864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDQxJzExLjAiTiA3NsKwNTUnMDkuMSJF!5e0!3m2!1sen!2sin!4v1234567890"
                   width="100%"
-                  height="300"
+                  height="280"
                   style={{ border: 0 }}
                   allowFullScreen=""
                   loading="lazy"
@@ -174,24 +129,92 @@ export default function ContactPage() {
                 />
               </div>
             </div>
+
+            {/* Right – Form */}
+            <div>
+              <h2 className="font-serif text-2xl text-charcoal mb-8">
+                Send Us a Message
+              </h2>
+              <form onSubmit={handleSubmit} className="space-y-5">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                  <input
+                    type="text"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 bg-white border border-tan text-charcoal text-sm rounded-sm outline-none focus:border-copper transition-colors placeholder:text-warm-gray-light"
+                    placeholder="Your Name"
+                    required
+                  />
+                  <input
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 bg-white border border-tan text-charcoal text-sm rounded-sm outline-none focus:border-copper transition-colors placeholder:text-warm-gray-light"
+                    placeholder="Your Email"
+                    required
+                  />
+                </div>
+                <input
+                  type="text"
+                  name="company"
+                  value={formData.company || ''}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 bg-white border border-tan text-charcoal text-sm rounded-sm outline-none focus:border-copper transition-colors placeholder:text-warm-gray-light"
+                  placeholder="Company Name (optional)"
+                />
+                <input
+                  type="text"
+                  name="subject"
+                  value={formData.subject}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 bg-white border border-tan text-charcoal text-sm rounded-sm outline-none focus:border-copper transition-colors placeholder:text-warm-gray-light"
+                  placeholder="Subject"
+                  required
+                />
+                <textarea
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  rows={5}
+                  className="w-full px-4 py-3 bg-white border border-tan text-charcoal text-sm rounded-sm outline-none focus:border-copper transition-colors placeholder:text-warm-gray-light resize-none"
+                  placeholder="Your Message"
+                  required
+                />
+                <button 
+                  type="submit" 
+                  disabled={status === 'Sending...'}
+                  className="btn-filled text-sm disabled:opacity-70 disabled:cursor-not-allowed"
+                >
+                  {status === 'Sending...' ? 'SENDING...' : 'SEND MESSAGE'}
+                </button>
+                {status && status !== 'Sending...' && (
+                  <p className={`text-sm mt-3 ${status.includes('successfully') ? 'text-green-600' : 'text-red-500'}`}>
+                    {status}
+                  </p>
+                )}
+              </form>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Partnership CTA */}
-      <section className="bg-charcoal py-20 lg:py-28">
-        <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
-          <h2 className="font-serif text-3xl md:text-4xl text-white font-normal leading-tight mb-5">
+      <section className="bg-cream py-16 lg:py-24 border-t border-tan/30">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p className="section-label mb-4">PARTNERSHIPS</p>
+          <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl text-charcoal font-normal leading-tight mb-5">
             Interested in a Business Partnership?
           </h2>
-          <p className="text-white/50 text-base leading-relaxed mb-10 max-w-2xl mx-auto">
-            We work with retailers, hotels, interior designers, and brands worldwide. Let's discuss how we can collaborate.
+          <p className="text-warm-gray text-sm leading-relaxed mb-8 max-w-2xl mx-auto">
+            We work with retailers, hotels, interior designers, and distributors worldwide. Let's explore how we can grow together.
           </p>
           <a
-            href="mailto:prateekgarg@yarnsmitharts.com"
-            className="btn-filled"
+            href="mailto:prateek@yarnsmitharts.com"
+            className="btn-filled text-sm"
           >
-            PARTNER WITH US
+            START A PARTNERSHIP
           </a>
         </div>
       </section>

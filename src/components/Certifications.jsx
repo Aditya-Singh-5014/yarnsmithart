@@ -26,7 +26,7 @@ export default function Certifications() {
         {/* Header */}
         <div className="text-center mb-16">
           <p className="section-label-white mb-4">TRUST & QUALITY</p>
-          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-white font-normal leading-tight max-w-2xl mx-auto">
+          <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white font-normal leading-tight max-w-2xl mx-auto">
             Certified Excellence, Assured Quality
           </h2>
           <p className="text-white/50 mt-5 text-base max-w-2xl mx-auto leading-relaxed">
@@ -36,7 +36,7 @@ export default function Certifications() {
         </div>
 
         {/* Certification Cards */}
-        <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 lg:gap-8">
           {certifications.map((cert) => {
             const Icon = cert.icon;
             return (

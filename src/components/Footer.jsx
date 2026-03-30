@@ -17,7 +17,7 @@ const companyLinks = [
 export default function Footer() {
   return (
     <footer className="bg-charcoal">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-20 pb-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-8">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-16">
           {/* Brand */}
           <div>
@@ -76,12 +76,20 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <Mail size={16} className="text-white/40 mt-0.5 flex-shrink-0" />
-                <a
-                  href="mailto:prateekgarg@yarnsmitharts.com"
-                  className="text-white/50 text-sm hover:text-copper-light transition-colors"
-                >
-                  prateekgarg@yarnsmitharts.com
-                </a>
+                <div className="flex flex-col">
+                  <a
+                    href="mailto:prateek@yarnsmitharts.com"
+                    className="text-white/50 text-sm hover:text-copper-light transition-colors break-all"
+                  >
+                    prateek@yarnsmitharts.com
+                  </a>
+                  <a
+                    href="mailto:prachi@yarnsmitharts.com"
+                    className="text-white/50 text-sm hover:text-copper-light transition-colors break-all mt-1"
+                  >
+                    prachi@yarnsmitharts.com
+                  </a>
+                </div>
               </li>
               <li className="flex items-start gap-3">
                 <Phone size={16} className="text-white/40 mt-0.5 flex-shrink-0" />
@@ -106,10 +114,10 @@ export default function Footer() {
         {/* Divider */}
         <div className="border-t border-white/10 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-white/30 text-xs">
-              © 2026 Yarnsmitharts. All rights reserved.
+            <p className="text-white/30 text-xs text-center md:text-left">
+              © 2026 Yarnsmith Arts. All rights reserved.
             </p>
-            <p className="text-white/30 text-xs">
+            <p className="text-white/30 text-xs text-center md:text-right">
               Crafted with passion in India
             </p>
           </div>

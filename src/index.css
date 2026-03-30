@@ -81,7 +81,7 @@ body {
 
 .btn-outline-light {
   display: inline-block;
-  padding: 0.875rem 11rem;
+  padding: 0.875rem 2rem;
   border: 1px solid currentColor;
   font-size: 0.75rem;
   font-weight: 500;
@@ -137,4 +137,14 @@ body {
 
 .animate-fade-in-up {
   animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Responsiveness adjustments for <= 480px */
+@media (max-width: 480px) {
+  .btn-outline, 
+  .btn-filled, 
+  .btn-outline-light {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.65rem;
+  }
 }

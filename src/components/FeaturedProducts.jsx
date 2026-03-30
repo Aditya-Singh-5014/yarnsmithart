@@ -1,26 +1,26 @@
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
+import productCollectionImg1 from "../assets/Background.png";
+import productCollectionImg2 from "../assets/Storage & Baskets.png";
+import productCollectionImg3 from "../assets/Kitchen Accessories.png";
 
 const products = [
   {
-    title: 'Tableware & Placemats',
+    title: "Seasonal Decor",
     description:
-      'Woven placemats, coasters, and table runners crafted from natural fibers.',
-    image:
-      'https://yarnsmitharts-brand-blueprint.lovable.app/assets/products-collection-DeqHbNLb.jpg',
+      "Festive and seasonal decorations handcrafted to bring warmth and celebration to your home.",
+    image: productCollectionImg1,
   },
   {
-    title: 'Storage & Baskets',
+    title: "Home Decore",
     description:
-      'Artisanal baskets and organizers that bring order with elegance.',
-    image:
-      'https://yarnsmitharts-brand-blueprint.lovable.app/assets/products-collection-DeqHbNLb.jpg',
+      "Artisanal home accessories designed to add character and charm to every room.",
+    image: productCollectionImg2,
   },
   {
-    title: 'Kitchen Accessories',
+    title: "Kitchen Accessories",
     description:
-      'Serving boards, trivets, and accessories for the discerning cook.',
-    image:
-      'https://yarnsmitharts-brand-blueprint.lovable.app/assets/products-collection-DeqHbNLb.jpg',
+      "Serving boards, trivets, and accessories for the discerning cook.",
+    image: productCollectionImg3,
   },
 ];
 
@@ -41,12 +41,9 @@ export default function FeaturedProducts() {
         </div>
 
         {/* Product Grid */}
-        <div className="grid md:grid-cols-3 gap-6 lg:gap-8 mb-14">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 lg:gap-8 mb-14">
           {products.map((product) => (
-            <div
-              key={product.title}
-              className="group cursor-pointer"
-            >
+            <div key={product.title} className="group cursor-pointer">
               <div className="relative overflow-hidden rounded-sm mb-5">
                 <img
                   src={product.image}

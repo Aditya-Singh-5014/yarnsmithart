@@ -7,7 +7,6 @@ import Events from '../components/Events';
 import Certifications from '../components/Certifications';
 import Testimonials from '../components/Testimonials';
 import Newsletter from '../components/Newsletter';
-import CTABanner from '../components/CTABanner';
 
 export default function HomePage() {
   return (
@@ -21,7 +20,6 @@ export default function HomePage() {
       <Certifications />
       <Testimonials />
       <Newsletter />
-      <CTABanner />
     </>
   );
 }
