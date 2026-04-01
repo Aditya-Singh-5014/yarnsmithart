@@ -20,13 +20,12 @@ export default function Events() {
             <p className="section-label mb-4">EVENTS & EXHIBITIONS</p>
 
             <h2 className="section-heading text-2xl sm:text-3xl md:text-4xl lg:text-[2.65rem] mb-6">
-              Meet Us at the World's Finest Trade Shows
+              Meet us at the World's Finest Trade
+Shows
             </h2>
 
             <p className="text-warm-gray text-base leading-relaxed mb-10 max-w-lg">
-              Yarnsmitharts regularly participates in premier international
-              trade fairs and exhibitions, showcasing our latest collections
-              to partners and design enthusiasts worldwide.
+              Yarnsmith Arts regularly participates in premier trade fairs and exhibitions, showcasing our latest collections to partners and design enthusiasts.
             </p>
 
             <Link to="/events" className="btn-outline text-charcoal">

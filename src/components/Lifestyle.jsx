@@ -27,9 +27,9 @@ export default function Lifestyle() {
               </h2>
 
               <p className="text-white/60 text-base leading-relaxed mb-10 max-w-md">
-                Our accessories are designed to seamlessly integrate into your
-                daily rituals, making every moment and every occasion worth
-                savouring.
+                Our accessories are designed to seamlessly integrate into your daily
+rituals — turning an ordinary morning into an aesthetic experience, and
+a simple dinner into an occasion worth savouring.
               </p>
 
               <Link

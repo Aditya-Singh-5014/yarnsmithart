@@ -19,7 +19,7 @@ const features = [
   {
     icon: Globe,
     title: 'Global Reach',
-    description: 'Trusted by retailers and partners across 20+ countries.',
+    description: 'Trusted by retailers, importers wholesalers across.',
   },
 ];
 
@@ -29,10 +29,10 @@ export default function WhyUs() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <p className="section-label mb-4">WHY YARNSMITHARTS</p>
+          <p className="section-label mb-4">WHY YARNSMITH ARTS</p>
           <h2 className="section-heading text-xl sm:text-2xl md:text-3xl lg:text-4xl max-w-3xl mx-auto">
-            Crafted for Those Who <br />
-            Appreciate the Finer Things
+            Crafted for those who <br />
+            appreciate the finer things
           </h2>
         </div>
 

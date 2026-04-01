@@ -1,22 +1,22 @@
 import { Link } from 'react-router-dom';
 import craftsmanshipImg from '../assets/Craftsmanship.png';
-import { Shield, Scale, Star, CheckCircle, Award } from 'lucide-react';
+import { Shield, Star, CheckCircle, Award } from 'lucide-react';
 
 const certifications = [
   {
     icon: Shield,
-    title: 'ISO Certified',
-    description: 'Meeting international manufacturing and quality management standards.',
+    title: 'ISO 14001:2015',
+    description: 'Certified quality management system ensuring consistent product excellence.',
   },
   {
-    icon: Scale,
-    title: 'Fair Trade Practices',
-    description: 'Ethical sourcing, fair labour practices, and community empowerment.',
+    icon: Award,
+    title: 'FSC Compliance',
+    description: 'Forest Stewardship Council - Certification for forest management or Chain of Custody (CoC) to trace materials.',
   },
   {
-    icon: Star,
-    title: 'Quality Assured',
-    description: 'Rigorous testing at every stage — from raw material selection to final finishing.',
+    icon: CheckCircle,
+    title: 'SEDEX Membership',
+    description: 'Committed to responsible and ethical business practices across our supply chain.',
   },
 ];
 
@@ -35,12 +35,13 @@ export default function QualityCertificationsPage() {
       <section className="relative bg-charcoal py-28 lg:py-36 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-charcoal via-charcoal-light/50 to-charcoal opacity-90" />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="section-label text-copper-light mb-4 tracking-[0.3em]">TRUST & QUALITY</p>
+          <p className="section-label text-copper-light mb-4 tracking-[0.3em]">TRUST & STANDARDS</p>
           <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white font-normal leading-tight">
-            Quality & Certifications
+            Certifications & Audits
           </h1>
           <p className="text-white/60 mt-5 text-lg max-w-2xl mx-auto leading-relaxed">
-            Our commitment to excellence is backed by internationally recognised certifications and rigorous quality processes.
+            Our commitment to excellence is validated by internationally recognised
+standards and rigorous quality processes.
           </p>
         </div>
       </section>
@@ -51,8 +52,12 @@ export default function QualityCertificationsPage() {
           <div className="text-center mb-16">
             <p className="section-label mb-4">CERTIFICATIONS</p>
             <h2 className="section-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
-              Handcrafted Excellence
+              Quality Certifications
             </h2>
+            <p className="text-warm-gray text-base leading-relaxed mt-5">
+              We hold certifications that reflect our dedication to global quality and safety
+standards.
+            </p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 lg:gap-8">
@@ -115,13 +120,13 @@ export default function QualityCertificationsPage() {
       <section className="bg-charcoal py-20 lg:py-28">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl text-white font-normal leading-tight mb-5">
-            Questions About Our Quality Standards?
+            Quality You Can Trust
           </h2>
           <p className="text-white/50 text-base leading-relaxed mb-10 max-w-2xl mx-auto">
-            We're happy to share our certification documents and quality reports with potential partners.
+            Request our compliance documentation or schedule a factory visit.
           </p>
           <Link to="/contact" className="btn-outline text-white border-white/40 hover:bg-white hover:text-charcoal hover:border-white">
-            CONTACT US
+            GET IN TOUCH
           </Link>
         </div>
       </section>

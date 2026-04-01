@@ -1,6 +1,5 @@
 import { Heart, TrendingUp, Users, Clock, Briefcase } from 'lucide-react';
-import craftsmanshipImg from '../assets/Craftsmanship.png';
-import lifestyleImg from '../assets/Lifestyle inspiration.png';
+import lifestyleImg from '../assets/Our workspace.png';
 
 const cultureHighlights = [
   {
@@ -61,7 +60,7 @@ export default function CareersPage() {
           <img
             src={lifestyleImg}
             alt="Yarnsmitharts workspace"
-            className="w-full h-full object-cover opacity-50"
+            className="w-full h-full object-cover opacity-90"
           />
           <div className="absolute inset-0 bg-linear-to-r from-charcoal/70 via-charcoal/40 to-transparent" />
         </div>
@@ -81,7 +80,7 @@ export default function CareersPage() {
             Build Something Beautiful
           </h2>
           <p className="text-warm-gray text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">
-            At Yarnsmitharts, we're more than a brand — we're a community of passionate individuals
+            At Yarnsmith Arts, we're more than a brand — we're a community of passionate individuals
             dedicated to craftsmanship, design, and sustainability. Join us and be part of a team that's
             shaping the future of premium home accessories.
           </p>

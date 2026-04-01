@@ -22,7 +22,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <Link to="/" className="font-serif text-2xl text-white font-bold mb-4 block">
-              Yarnsmitharts
+              YARNSMITH ARTS
             </Link>
             <p className="text-white/50 text-sm leading-relaxed">
               Crafting premium home & kitchen accessories that transform

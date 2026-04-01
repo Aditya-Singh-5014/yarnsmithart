@@ -1,4 +1,5 @@
 import { Star } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const customerReviews = [
   {
@@ -85,8 +86,8 @@ export default function TestimonialsPage() {
             Testimonials
           </h1>
           <p className="text-white/50 text-sm max-w-lg leading-relaxed">
-            Hear from our partners, retailers, and customers who trust
-            Yarnsmitharts for premium home accessories.
+            Hear from our retailers and customers who trust
+            Yarnsmith Arts for premium home accessories.
           </p>
         </div>
       </section>
@@ -132,15 +133,12 @@ export default function TestimonialsPage() {
             Join Our Growing Network
           </h2>
           <p className="text-white/50 text-sm leading-relaxed max-w-xl mx-auto mb-8">
-            Become part of the Yarnsmitharts family. Let's create something
+            Become part of the Yarnsmith Arts family. Let's create something
             beautiful together.
           </p>
-          <a
-            href="https://www.instagram.com/yarnsmith_arts/"
-            className="inline-block border border-white/40 text-white text-xs tracking-[0.2em] uppercase px-8 py-3 hover:bg-white hover:text-charcoal transition-all duration-300"
-          >
+          <Link to="/contact" className="btn-outline text-white border-white/40 hover:bg-white hover:text-charcoal hover:border-white">
             GET IN TOUCH
-          </a>
+          </Link>
         </div>
       </section>
     </>

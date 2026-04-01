@@ -25,13 +25,13 @@ export default function Certifications() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <p className="section-label-white mb-4">TRUST & QUALITY</p>
+          <p className="section-label-white mb-4">TRUST & STANDARDS</p>
           <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white font-normal leading-tight max-w-2xl mx-auto">
-            Certified Excellence, Assured Quality
+            Certifications & Audits
           </h2>
           <p className="text-white/50 mt-5 text-base max-w-2xl mx-auto leading-relaxed">
-            Our commitment to quality is backed by internationally recognised
-            certifications and rigorous auditing processes.
+            Our commitment to excellence is validated by internationally recognised
+standards and rigorous quality processes.
           </p>
         </div>
 

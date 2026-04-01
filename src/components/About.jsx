@@ -8,14 +8,14 @@ export default function About() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Text Content */}
           <div>
-            <p className="section-label mb-4">THE YARNSMITHARTS DIFFERENCE</p>
+            <p className="section-label mb-4">THE YARNSMITH ARTS DIFFERENCE</p>
 
             <h2 className="section-heading text-3xl sm:text-4xl md:text-5xl mb-6 sm:mb-8">
               Artistry in Every Detail
             </h2>
 
             <p className="text-warm-gray text-base leading-relaxed mb-6">
-              At Yarnsmitharts, we believe that the objects you surround
+              At Yarnsmith Arts, we believe that the objects you surround
               yourself with should tell a story. Each piece in our collection
               is a testament to the enduring beauty of skilled craftsmanship
               — where natural materials meet contemporary design to create

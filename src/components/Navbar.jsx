@@ -41,7 +41,7 @@ export default function Navbar() {
             <img
               src={logoImg}
               alt="Yarnsmitharts logo"
-              className="h-8 w-auto"
+              className="h-8 w-auto text-bold"
             />
             YARNSMITH ARTS
           </Link>
@@ -68,7 +68,7 @@ export default function Navbar() {
               to="/contact"
               className="btn-filled text-[0.65rem] py-1.5 px-3.5 ml-2 whitespace-nowrap tracking-wider"
             >
-              REQUEST A CATALOGUE
+              REQUEST A CATALOG
             </Link>
           </div>
 

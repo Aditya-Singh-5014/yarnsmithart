@@ -82,7 +82,7 @@ export default function AboutPage() {
             modern living."
           </h2>
           <p className="text-charcoal text-sm font-medium">Prateek Garg</p>
-          <p className="text-warm-gray text-xs mt-1">Founder, Yarnsmitharts</p>
+          <p className="text-warm-gray text-xs mt-1">Founder, Yarnsmith Arts</p>
         </div>
       </section>
 
