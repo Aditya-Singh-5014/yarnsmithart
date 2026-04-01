@@ -1,11 +1,13 @@
 import { Link } from 'react-router-dom';
 import { Check } from 'lucide-react';
-import productCollectionImg from '../assets/Product collection.png';
-import lifestyleImg from "../assets/Lifestyle inspiration.png";
-import craftsmanshipImg from '../assets/Craftsmanship.png';
-import heroHomeImg from '../assets/YarnsmithartsHome.png';
+import productCollectionImg from '../assets/Placemats & Table Runners.png';
+import lifestyleImg from "../assets/Storage & Baskets.png";
+import craftsmanshipImg from '../assets/Seasonal Collections.png';
+import heroHomeImg from '../assets/Custom & Bespoke.png';
 import basketsImg from '../assets/Baskets & Storage.png';
-import kitchenImg from '../assets/Kitchen Accessories.png';
+import kitchenImg from '../assets/Kitchen Accessories-1.png';
+import Lifestyleinspiration from '../assets/Lifestyle inspiration.png'
+import productHero from '../assets/Product collection.png'
 
 const categories = [
   {
@@ -55,7 +57,7 @@ export default function ProductsPage() {
       {/* Hero Banner */}
       <section className="relative mt-16 lg:mt-20 bg-charcoal overflow-hidden group">
         <img
-          src={productCollectionImg}
+          src={productHero}
           alt="Product collection"
           className="w-full h-auto object-cover opacity-80 block"
         />
@@ -114,7 +116,7 @@ export default function ProductsPage() {
             {/* Image on Left */}
             <div className="relative overflow-hidden rounded-sm">
               <img
-                src={craftsmanshipImg}
+                src={Lifestyleinspiration}
                 alt="Design highlights"
                 className="w-full h-[400px] lg:h-[500px] object-cover hover:scale-105 transition-transform duration-700"
               />

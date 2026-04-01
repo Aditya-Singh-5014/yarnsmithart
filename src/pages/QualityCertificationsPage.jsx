@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import craftsmanshipImg from '../assets/Craftsmanship.png';
-import { Shield, Star, CheckCircle, Award } from 'lucide-react';
+import { Shield, CheckCircle, Award, FileCheck, ClipboardCheck } from 'lucide-react';
 
 const certifications = [
   {
@@ -21,11 +21,29 @@ const certifications = [
 ];
 
 const qualityPoints = [
-  'Every product undergoes multi-stage quality inspection',
-  'Raw materials tested for purity and strength',
-  'Colour fastness and durability testing on all finishes',
-  'Compliance with EU, US, and APAC safety standards',
-  'Sustainable packaging and shipping practices',
+  'Raw material quality inspection',
+  'In-process quality checks',
+  'Final product testing',
+  'Packaging & shipment audit',
+];
+
+const processCards = [
+  {
+    icon: FileCheck,
+    title: 'AQL Testing'
+  },
+  {
+    icon: ClipboardCheck,
+    title: 'Third-Party Audits'
+  },
+  {
+    icon: Shield,
+    title: 'Material Safety'
+  },
+  {
+    icon: Award,
+    title: 'Export Quality'
+  }
 ];
 
 export default function QualityCertificationsPage() {
@@ -88,30 +106,47 @@ standards.
       <section className="bg-tan-light py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-            <div className="relative overflow-hidden rounded-sm">
-              <img
-                src={craftsmanshipImg}
-                alt="Quality inspection process"
-                className="w-full h-[400px] lg:h-[500px] object-cover hover:scale-105 transition-transform duration-700"
-              />
-            </div>
+            
+            {/* Left Content */}
             <div>
-              <p className="section-label mb-4">OUR PROCESS</p>
-              <h2 className="section-heading text-2xl sm:text-3xl md:text-4xl lg:text-[2.65rem] mb-6">
-                Quality Trust in Every Fiber
-              </h2>
-              <p className="text-warm-gray text-base leading-relaxed mb-8">
-                From raw material selection to the final handcrafted product, we maintain the highest standards of quality at every step of our process.
+              <p className="section-label mb-4 tracking-[0.3em] text-copper text-[10px] sm:text-xs">
+                STANDARDS
               </p>
-              <ul className="space-y-4">
+              <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-[2.65rem] text-charcoal mb-6 leading-tight">
+                Manufacturing Excellence
+              </h2>
+              <p className="text-warm-gray text-[13.5px] leading-[1.8] mb-8 max-w-lg">
+                Our manufacturing facility in Bahadurgarh, Haryana operates under stringent quality
+                controls. Every product undergoes multi-stage inspection — from raw material
+                sourcing to final packaging — ensuring that only the finest pieces reach our
+                partners.
+              </p>
+              <ul className="space-y-3 sm:space-y-4">
                 {qualityPoints.map((point) => (
-                  <li key={point} className="flex items-start gap-3 text-warm-gray text-base">
-                    <CheckCircle size={18} className="text-copper mt-0.5 flex-shrink-0" />
+                  <li key={point} className="flex items-center gap-3 text-warm-gray text-[13px] sm:text-[13.5px]">
+                    <CheckCircle size={16} className="text-copper flex-shrink-0" strokeWidth={1.5} />
                     {point}
                   </li>
                 ))}
               </ul>
             </div>
+
+            {/* Right Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6">
+              {processCards.map((card) => {
+                const Icon = card.icon;
+                return (
+                  <div 
+                    key={card.title} 
+                    className="bg-cream py-10 px-6 flex flex-col items-center justify-center text-center shadow-sm"
+                  >
+                    <Icon size={24} className="text-copper mb-4" strokeWidth={1.5} />
+                    <p className="text-charcoal text-[13px] font-medium">{card.title}</p>
+                  </div>
+                );
+              })}
+            </div>
+
           </div>
         </div>
       </section>

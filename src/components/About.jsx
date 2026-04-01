@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import craftsmanshipImg from '../assets/Artisan craftsmanship.png';
+import craftsmanshipImg from '../assets/ArtistCraftmanship.png';
 
 export default function About() {
   return (
