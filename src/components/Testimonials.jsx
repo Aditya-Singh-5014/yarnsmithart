@@ -4,14 +4,14 @@ import { Link } from 'react-router-dom';
 const testimonials = [
   {
     quote:
-      '"Yarnsmitharts products have transformed our home décor section. The quality is unmatched and our customers love the craftsmanship."',
+      '"Yarnsmith Arts products have transformed our home décor section. The quality is unmatched and our customers love the craftsmanship."',
     author: 'Dolf',
     role: 'Retail Buyer, Netherlands',
     rating: 5,
   },
   {
     quote:
-      '"Working with Yarnsmitharts has been a revelation. Their attention to detail and commitment to sustainable practices aligns perfectly with our values."',
+      '"Working with Yarnsmith Arts has been a revelation. Their attention to detail and commitment to sustainable practices aligns perfectly with our values."',
     author: 'Wendy',
     role: 'Interior Designer, USA',
     rating: 5,

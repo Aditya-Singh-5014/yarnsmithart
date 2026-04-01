@@ -3,13 +3,13 @@ import { Link } from 'react-router-dom';
 
 const customerReviews = [
   {
-    quote: '"Yarnsmitharts Kitchen Plater products have transformed our home décor section. The quality is unmatched and our customers love the craftsmanship."',
+    quote: '"Yarnsmith Arts Kitchen Plater products have transformed our home décor section. The quality is unmatched and our customers love the craftsmanship."',
     author: 'Susanne.',
     role: 'Retail Buyer, Netherlands',
     rating: 5,
   },
   {
-    quote: '"Working with Yarnsmitharts has been a revelation. Their attention to detail and commitment to sustainable practices aligns perfectly with our values."',
+    quote: '"Working with Yarnsmith Arts has been a revelation. Their attention to detail and commitment to sustainable practices aligns perfectly with our values."',
     author: 'Wendy.',
     role: 'Interior Designer, USA',
     rating: 5,
@@ -24,7 +24,7 @@ const customerReviews = [
 
 const retailerFeedback = [
   {
-    quote: '"Yarnsmitharts has been a cornerstone supplier for our home décor category. Their range is versatile, quality is consistent, and margins are excellent."',
+    quote: '"Yarnsmith Arts has been a cornerstone supplier for our home décor category. Their range is versatile, quality is consistent, and margins are excellent."',
     author: 'James K.',
     role: 'USA',
   },

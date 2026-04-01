@@ -112,7 +112,7 @@ export default function ContactPage() {
               {/* Map Embed */}
               <div className="rounded-sm overflow-hidden border border-tan">
                 <iframe
-                  title="Yarnsmitharts Location"
+                  title="Yarnsmith Arts Location"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1820.87674972858!2d76.8849556393611!3d28.70845683615785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d0b9829bfc97b%3A0x7c49f93940949d3a!2sYarnsmith%20Arts!5e1!3m2!1sen!2sin!4v1775054460748!5m2!1sen!2sin"
                   width="100%"
                   height="280"
