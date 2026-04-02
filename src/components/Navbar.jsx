@@ -41,7 +41,7 @@ export default function Navbar() {
             <img
               src={logoImg}
               alt="Yarnsmith Arts logo"
-              className="h-8 w-auto text-bold"
+              className="h-10 lg:h-12 w-auto"
             />
             YARNSMITH ARTS
           </Link>
