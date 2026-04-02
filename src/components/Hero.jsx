@@ -12,6 +12,7 @@ export default function Hero() {
         <img
           src={heroImage}
           alt="Handcrafted home accessories"
+          loading="lazy"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-charcoal/60 via-charcoal/30 to-transparent" />
@@ -25,8 +26,8 @@ export default function Hero() {
           </p>
 
           <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-normal text-white leading-[1.1] mb-6 sm:mb-8">
-            Where Craft Meets{' '}
-            <em className="italic">Modern Living</em>
+            Where craft meets{' '}
+            <em className="italic">modern living</em>
           </h1>
 
           <p className="text-white/75 text-base sm:text-lg md:text-xl font-light leading-relaxed mb-8 sm:mb-10 max-w-lg">

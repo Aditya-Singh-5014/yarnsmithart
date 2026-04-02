@@ -59,6 +59,7 @@ export default function CareersPage() {
         <img
           src={lifestyleImg}
           alt="Yarnsmitharts workspace"
+          loading="lazy"
           className="w-full h-auto object-cover opacity-80 block"
         />
         <div className="absolute inset-0 bg-linear-to-r from-charcoal/70 via-charcoal/40 to-transparent pointer-events-none" />
@@ -78,7 +79,7 @@ export default function CareersPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="section-label mb-4 tracking-[0.3em]">WORK WITH US</p>
           <h2 className="section-heading text-2xl sm:text-3xl md:text-4xl lg:text-[2.65rem] mb-5">
-            Build Something Beautiful
+            Build something beautiful
           </h2>
           <p className="text-warm-gray text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">
             At Yarnsmith Arts, we're more than a brand — we're a community of passionate individuals
@@ -94,7 +95,7 @@ export default function CareersPage() {
           <div className="text-center mb-14">
             <p className="section-label mb-4 tracking-[0.3em]">CULTURE</p>
             <h2 className="section-heading text-2xl sm:text-3xl md:text-4xl lg:text-[2.65rem]">
-              Why Work at YARNSMITH ARTS
+              Why work at YARNSMITH ARTS
             </h2>
           </div>
 

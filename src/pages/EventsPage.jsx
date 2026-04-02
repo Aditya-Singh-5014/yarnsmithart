@@ -123,6 +123,7 @@ function EventCard({ event, index }) {
         <img
           src={event.image || tradeShowImg}
           alt={event.name}
+          loading="lazy"
           className="w-full h-[300px] sm:h-[350px] lg:h-[400px] object-cover"
         />
       </div>
@@ -163,6 +164,7 @@ export default function EventsPage() {
         <img
           src={tradeShowImg}
           alt="Exhibition booth"
+          loading="lazy"
           className="w-full h-auto object-cover opacity-80 block"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-charcoal/70 via-charcoal/40 to-transparent pointer-events-none" />
@@ -204,7 +206,7 @@ export default function EventsPage() {
       <section className="bg-charcoal py-20 lg:py-28">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl text-white font-normal leading-tight mb-5">
-            Meet Us at Our Next Event
+            Meet us at our next event
           </h2>
           <p className="text-white/50 text-base leading-relaxed mb-10 max-w-2xl mx-auto">
             Schedule a meeting with our team at an upcoming exhibition.

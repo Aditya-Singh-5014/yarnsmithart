@@ -11,6 +11,7 @@ export default function Events() {
             <img
               src={tradeShowImg}
               alt="Trade show exhibition booth"
+              loading="lazy"
               className="w-full h-[400px] lg:h-[500px] object-cover hover:scale-105 transition-transform duration-700"
             />
           </div>

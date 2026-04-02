@@ -20,6 +20,7 @@ export default function AboutPage() {
         <img
           src={productCollectionImg}
           alt="Yarnsmitharts artisan at work"
+          loading="lazy"
           className="w-full h-auto object-cover opacity-80 block"
         />
         <div className="absolute inset-0 bg-linear-to-r from-charcoal/50 via-charcoal/20 to-transparent pointer-events-none" />
@@ -43,7 +44,7 @@ export default function AboutPage() {
                 OUR HERITAGE
               </p>
               <h2 className="section-heading text-2xl sm:text-3xl md:text-4xl lg:text-[2.65rem] mb-6">
-                Born from a Passion for Craft
+                Born from a passion for craft
               </h2>
               <p className="text-warm-gray text-[14px] leading-[1.8] mb-5">
                 Yarnsmith Arts was founded with a singular vision: to bring the
@@ -63,6 +64,7 @@ export default function AboutPage() {
               <img
                 src={heroHomeImg}
                 alt="Handcrafted products"
+                loading="lazy"
                 className="w-full h-[400px] lg:h-[500px] object-cover hover:scale-105 transition-transform duration-700"
               />
             </div>
@@ -239,7 +241,7 @@ export default function AboutPage() {
       <section className="bg-charcoal-light py-20 lg:py-28 border-t border-white/10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl text-white font-normal leading-tight mb-5 italic">
-            Discover Our Collections
+            Discover our collections
           </h2>
           <p className="text-white/50 text-base leading-relaxed mb-10 max-w-2xl mx-auto">
             See how craftsmanship comes alive in our premium product range.

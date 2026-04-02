@@ -11,6 +11,7 @@ export default function Lifestyle() {
             <img
               src={lifestyleImg}
               alt="Modern living space with artisanal accessories"
+              loading="lazy"
               className="w-full h-full min-h-[350px] object-cover"
             />
           </div>
@@ -23,7 +24,7 @@ export default function Lifestyle() {
               </p>
 
               <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-[2.75rem] text-white leading-[1.15] mb-6">
-                <em className="italic">Design Your Everyday</em>
+                <em className="italic">Design your everyday</em>
               </h2>
 
               <p className="text-white/60 text-base leading-relaxed mb-10 max-w-md">

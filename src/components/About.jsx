@@ -11,7 +11,7 @@ export default function About() {
             <p className="section-label mb-4">THE YARNSMITH ARTS DIFFERENCE</p>
 
             <h2 className="section-heading text-3xl sm:text-4xl md:text-5xl mb-6 sm:mb-8">
-              Artistry in Every Detail
+              Artistry in every detail
             </h2>
 
             <p className="text-warm-gray text-base leading-relaxed mb-6">
@@ -37,6 +37,7 @@ export default function About() {
             <img
               src={craftsmanshipImg}
               alt="Artisan crafting with traditional techniques"
+              loading="lazy"
               className="w-full h-[400px] lg:h-[500px] object-cover hover:scale-105 transition-transform duration-700"
             />
           </div>

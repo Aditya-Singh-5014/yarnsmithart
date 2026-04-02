@@ -155,7 +155,7 @@ standards.
       <section className="bg-charcoal py-20 lg:py-28">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl text-white font-normal leading-tight mb-5">
-            Quality You Can Trust
+            Quality you can trust
           </h2>
           <p className="text-white/50 text-base leading-relaxed mb-10 max-w-2xl mx-auto">
             Request our compliance documentation or schedule a factory visit.

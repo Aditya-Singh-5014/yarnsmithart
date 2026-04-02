@@ -59,6 +59,7 @@ export default function ProductsPage() {
         <img
           src={productHero}
           alt="Product collection"
+          loading="lazy"
           className="w-full h-auto object-cover opacity-80 block"
         />
         <div className="absolute inset-0 bg-linear-to-r from-charcoal/50 via-charcoal/20 to-transparent pointer-events-none" />
@@ -79,7 +80,7 @@ export default function ProductsPage() {
           <div className="text-center mb-14 lg:mb-18">
             <p className="section-label mb-4 tracking-[0.3em]">CATEGORIES</p>
             <h2 className="section-heading text-2xl sm:text-3xl md:text-4xl lg:text-[2.65rem] mb-5">
-              Explore Our Range
+              Explore our range
             </h2>
             <p className="text-warm-gray text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">
               From tabletop essentials to statement décor, discover collections designed to
@@ -94,6 +95,7 @@ export default function ProductsPage() {
                   <img
                     src={cat.image}
                     alt={cat.title}
+                    loading="lazy"
                     className="w-full h-[320px] lg:h-[380px] object-cover group-hover:scale-105 transition-transform duration-700"
                   />
                 </div>
@@ -118,6 +120,7 @@ export default function ProductsPage() {
               <img
                 src={Lifestyleinspiration}
                 alt="Design highlights"
+                loading="lazy"
                 className="w-full h-[400px] lg:h-[500px] object-cover hover:scale-105 transition-transform duration-700"
               />
             </div>
@@ -145,7 +148,7 @@ export default function ProductsPage() {
       <section className="bg-charcoal py-20 lg:py-28">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl text-white font-normal leading-tight mb-5 italic">
-            Interested in Our Products?
+            Interested in our products?
           </h2>
           <p className="text-white/50 text-base leading-relaxed mb-10 max-w-2xl mx-auto">
             Get in touch with our team for catalogues, samples, and custom orders.

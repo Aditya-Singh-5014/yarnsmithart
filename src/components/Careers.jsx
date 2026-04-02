@@ -46,7 +46,7 @@ export default function Careers() {
         <div className="text-center mb-20">
           <p className="section-label mb-4">CAREERS</p>
           <h2 className="section-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
-            Why Work at YARNSMITH ARTS
+            Why work at YARNSMITH ARTS
           </h2>
         </div>
 

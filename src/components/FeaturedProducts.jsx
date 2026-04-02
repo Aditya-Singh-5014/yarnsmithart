@@ -11,7 +11,7 @@ const products = [
     image: productCollectionImg1,
   },
   {
-    title: "Home Decore",
+    title: "Home Décor",
     description:
       "Artisanal home accessories designed to add character and charm to every room.",
     image: productCollectionImg2,
@@ -48,6 +48,7 @@ export default function FeaturedProducts() {
                 <img
                   src={product.image}
                   alt={product.title}
+                  loading="lazy"
                   className="w-full h-[320px] lg:h-[380px] object-cover group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
