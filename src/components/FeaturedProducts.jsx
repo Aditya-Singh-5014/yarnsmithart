@@ -5,7 +5,7 @@ import productCollectionImg3 from "../assets/Kitchen Accessories.png";
 
 const products = [
   {
-    title: "Seasonal Decor",
+    title: "Seasonal Décor",
     description:
       "Festive and seasonal decorations handcrafted to bring warmth and celebration to your home.",
     image: productCollectionImg1,
