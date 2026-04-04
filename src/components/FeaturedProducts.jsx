@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import productCollectionImg1 from "../assets/Background.png";
-import productCollectionImg2 from "../assets/Storage & Baskets.png";
-import productCollectionImg3 from "../assets/Kitchen Accessories.png";
+import productCollectionImg2 from "../assets/HomeDecor.png";
+import productCollectionImg3 from "../assets/KitchenAccessories.png";
 
 const products = [
   {

@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom';
 import { Check } from 'lucide-react';
 import productCollectionImg from '../assets/Placemats & Table Runners.png';
-import lifestyleImg from "../assets/Storage & Baskets.png";
+import lifestyleImg from "../assets/HomeDecor.png";
 import craftsmanshipImg from '../assets/Seasonal Collections.png';
 import heroHomeImg from '../assets/Custom & Bespoke.png';
 import basketsImg from '../assets/Baskets & Storage.png';
-import kitchenImg from '../assets/Kitchen Accessories-1.png';
+import kitchenImg from '../assets/KitchenAccessories.png';
 import Lifestyleinspiration from '../assets/Lifestyle inspiration.png'
 import productHero from '../assets/Product collection.png'
 
