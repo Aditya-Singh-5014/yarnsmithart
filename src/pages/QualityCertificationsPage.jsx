@@ -10,8 +10,8 @@ const certifications = [
   },
   {
     icon: Award,
-    title: 'FSC Compliance',
-    description: 'Forest Stewardship Council - Certification for forest management or Chain of Custody (CoC) to trace materials.',
+    title: 'Wood Legal Compliance',
+    description: 'Assurance of legally sourced wood materials, in compliance with applicable laws and international trade regulations.',
   },
   {
     icon: CheckCircle,
